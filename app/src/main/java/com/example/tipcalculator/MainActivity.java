@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         if(editTextBillAmount.getText().toString().trim().isEmpty()){
             Toast.makeText(getApplicationContext(), "Please enter the bill!", Toast.LENGTH_SHORT).show();
         } else {
+            textViewTipAmount.setVisibility(TextView.VISIBLE);
             if(i == radioButtonTipTen.getId()) {
                 textViewTipAmount.setText(df.format(Double.parseDouble
                         (editTextBillAmount.getText().toString()) * .10));
